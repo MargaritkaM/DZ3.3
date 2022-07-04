@@ -4,7 +4,7 @@ public class CreditPaymentService {
         float monthlyPercentage;
         {
             monthlyPercentage = (float) 9.99 / (100 * 12);
-            result = (int)  (summa * (monthlyPercentage / (1 - Math.pow(1 + monthlyPercentage, -period))));
+            result = (int) (summa * (monthlyPercentage / (1 - Math.pow(1 + monthlyPercentage, -period))));
         }
         return result;
     }
