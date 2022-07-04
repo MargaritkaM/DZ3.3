@@ -1,10 +1,10 @@
 public class CreditPaymentService {
-    public float calculate(float a, float b) {
+    public float calculate(float summa, float period) {
         float result;
-        float x;
+        float monthlyPercentage;
         {
-            x = (float) Math.pow(1.008, -b);
-            result = (float) (a * (0.008 / (1 - x)));
+            monthlyPercentage = (float) 9.99 / (100 * 12);
+            result = (float) (summa * (monthlyPercentage / (1 - Math.pow(1 + monthlyPercentage, -period))));
         }
         return result;
     }
