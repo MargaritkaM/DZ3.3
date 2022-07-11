@@ -7,5 +7,5 @@ public class CreditPaymentService {
             result = (int) (summa * (monthlyPercentage / (1 - Math.pow(1 + monthlyPercentage, -period))));
         }
         return (int) result;
-            }
+    }
 }
